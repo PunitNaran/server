@@ -4,7 +4,7 @@
 
 localtunnel exposes your localhost to the world for easy testing and sharing! No need to mess with DNS or deploy just to have others test out your changes.
 
-This repo is the server component. If you are just looking for the CLI localtunnel app, see (https://github.com/serverless-social/localtunnel).
+This repo is the server component. If you are just looking for the CLI localtunnel app, see (https://github.com/punitnaran/localtunnel).
 
 ## overview ##
 
@@ -19,7 +19,7 @@ The above are important as the client will ask the server for a subdomain under 
 
 ```shell
 # pick a place where the files will live
-git clone git://github.com/serverless-social/server.git
+git clone git://github.com/punitnaran/server.git
 cd server
 npm install
 
@@ -57,7 +57,7 @@ General server information.
 
 You can deploy your own localtunnel server using the prebuilt docker image.
 
-**Note** This assumes that you have a proxy in front of the server to handle the http(s) requests and forward them to the localtunnel server on port 3000. You can use our [localtunnel-nginx](https://github.com/serverless-social/nginx) to accomplish this.
+**Note** This assumes that you have a proxy in front of the server to handle the http(s) requests and forward them to the localtunnel server on port 3000. You can use our [localtunnel-nginx](https://github.com/punitnaran/nginx) to accomplish this.
 
 If you do not want ssl support for your own tunnel (not recommended), then you can just run the below with `--port 80` instead.
 
@@ -66,5 +66,5 @@ docker run -d \
     --restart always \
     --name localtunnel \
     --net host \
-    serverless-social/localtunnel-server:latest --port 3000
+    punitnaran/localtunnel-server:latest --port 3000
 ```
